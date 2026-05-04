@@ -2,7 +2,7 @@ import asyncio
 import re
 import logging
 import sqlite3
-from airogram.client.default import DefaultBotProperties
+from aiogram.client.default import DefaultBotProperties
 from datetime import datetime, timedelta
 from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message, CallbackQuery, ReplyKeyboardRemove

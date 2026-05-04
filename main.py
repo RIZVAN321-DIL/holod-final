@@ -2,6 +2,7 @@ import asyncio
 import re
 import logging
 import sqlite3
+from airogram.client.default import DefaultBotProperties
 from datetime import datetime, timedelta
 from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message, CallbackQuery, ReplyKeyboardRemove
@@ -32,7 +33,7 @@ from keyboards import (
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
-bot = Bot(token=BOT_TOKEN, parse_mode="HTML")
+bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode="HTML"))
 dp = Dispatcher()
 
 # ---------- ХЕЛПЕРЫ ----------
